@@ -1,0 +1,105 @@
+@import "functions";
+.container{max-width: 1260px;}
+body{
+  a{text-decoration: none $imp;}
+  .a-btn{
+    border-radius: 24px;position: relative;font-weight: 600;font-style: normal;font-stretch: normal;line-height: 1.43;letter-spacing: normal;font-family: $font2;
+  }
+  h2{font-family: $font1; font-size: 24px;font-weight: 600;font-style: normal;font-stretch: normal;line-height: 1.5;letter-spacing: normal;}
+}
+header{
+  position: fixed;padding-top: 14px;box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);z-index:$z-head;width: 100%;height:72px;z-index: 9999;transition: .3s;
+ background: transparent;
+  .logo{img{filter: brightness(0) invert(1);}}
+  .menu{
+    ul{padding: 0;text-align:right; li{list-style: none; display: inline-block; margin-left:50px;a{transition:.3s; &:hover{color:$orange; transition: .3s;}color:white;font-size:14px;line-height:3;font-family: $font1;img{filter: brightness(0) invert(1);}}}}
+  }
+}
+  .topinfo{padding: 90px 0 50px 0;background-image: linear-gradient(102deg, $dark-blue, $dark-slate-blue);
+    .tabs{width:100%;padding:20px 0;a{position:relative;margin-right:30px;.box{display:inline-block;opacity:.5;img{filter: brightness(0) invert(1);padding:8px;border-radius: 50%;z-index: 2;position: relative; text-align:center;border:1px solid $gray2;}
+      &:before{content: '';width: 12px;height: 10px;position: absolute;right: -20px;top: 11px;background-image: url(../media/icons/dots.png);background-repeat: no-repeat;pointer-events: none;}
+    span{position: relative;background: #d8e1eb;display: inline-block;padding: 11px 20px;top: 1px;margin-left: -35px;border-radius: 24px;padding-left: 45px;font-family: $font2;font-size: 14px;font-weight: 600;font-style: normal;font-stretch: normal;line-height: 1.43;letter-spacing: normal;color:$dark-slate-blue;}}}
+    a:first-of-type{.box{opacity:1;img{filter:invert(0);background:white;}}}
+      a:last-of-type{.box{&:before{display: none;}}}
+    }
+    .bottom{
+     width: 100%; padding: 50px 0 30px 0;font-style: normal;font-stretch: normal;line-height: 1.33;letter-spacing: normal;
+      .direction{color:white; font-family: $font2;font-size: 48px;font-weight: 600;font-style: normal;font-stretch: normal;line-height: 1.33;letter-spacing: normal;
+      span{padding-right: 20px;}
+        span:nth-of-type(2){position:relative;img{transform: rotate(90deg); filter:brightness(0) invert(1);}
+          &:before{content: '';width: 12px;height: 10px;position: absolute;left: -20px;top: 32px;background-image: url(../media/icons/dots.png);background-repeat: no-repeat;pointer-events: none;}
+          &:after{content: '';width: 12px;height: 10px;position: absolute;right: 0px;top: 32px;background-image: url(../media/icons/dots.png);background-repeat: no-repeat;pointer-events: none;}}
+      }
+      .checkinfo{padding-top: 20px;color:white;font-family:$font2;font-size: 14px;font-weight: 600;font-style: normal;font-stretch: normal;line-height: 1.43;letter-spacing: normal;span{position: relative;padding-right: 20px;}
+      span:nth-of-type(2){
+        &:before{content: ''; position: absolute;width: 6px;height: 6px;opacity: 0.5; background-color: #ced7e0;border-radius: 50%; top:7px; left:-15px;}
+        &:after{content: ''; position: absolute;width: 6px;height: 6px;opacity: 0.5; background-color: #ced7e0;border-radius: 50%; top:7px; right:5px;}
+      }}
+      .price{position: relative; font-family: $font2;font-size: 48px;font-weight: 600;font-style: normal;font-stretch: normal;line-height: 1.33;letter-spacing: normal;text-align: right;color:white;
+      span:first-of-type{    position: absolute;display: block;font-size: 16px;width: 150px;top: -20px;right: 0;opacity: 0.5;}}
+      .a-btn{padding: 13px 20px;font-size: 14px; color:white; background: $orange; float:right; transition:.3s; &:hover{background-color: white; color:black; transition: .3s;} margin-top:20px; i{padding-left: 25px;}}
+    }
+  }
+  .selection{display: block; background-color: white;
+    ul{padding: 0;margin:0;
+      form{display: flex;}
+      li{list-style: none;position: relative; display: inline-block;width: 20%;font-size: 14px; font-family: $font2;font-size: 14px;opacity:.5;font-weight: 600;font-style: normal;font-stretch: normal;line-height: 1.43;letter-spacing: normal;
+      select, input{ border:none; border-left:1px solid lightgray;    padding: 26px;width: 100%;position: relative; padding-left: 70px;}
+        .datepicker-here{padding-left: 50px;}
+        #search{    width: 172px;height: 48px;border-radius: 24px;background: $gray3;padding-left: 0;text-align: center;float: right;color: white;margin-top: 10px;
+        &::placeholder{color:white;opacity: 1;} }
+        #search-icon{width: 25px; height:25px;right:15px; top:23px; position: absolute;filter:brightness(0) invert(1); background-image: url("../media/icons/magnify.svg");}
+        #f-from, #f-to{option:first-of-type{display: none;}}
+    }
+      #search-box{border-left: 1px solid lightgray;}
+      #from:after{content: ''; position: absolute;top:23px; left:20px; width: 25px; height: 25px; background-image: url("../media/icons/airplane takeoff.svg")}
+      #to:after{content: ''; position: absolute;top:23px; left:20px; width: 25px; height: 25px; background-image: url("../media/icons/airplane landing.svg")}
+      #date:after{content: ''; position: absolute;top:23px; left:20px; width: 25px; height: 25px; background-image: url("../media/icons/calendar text.svg")}
+      #passenger:after{content: ''; position: absolute;top:23px; left:20px; width: 25px; height: 25px; background-image: url("../media/icons/account.svg")}
+    }
+  }
+  .flights{background-color: $gray;padding: 50px 0;
+  .head{padding: 10px 0;span{display: inline-block;margin-right:15px;color:$dark-slate-blue; img{ transform: rotate(90deg); margin-top:-6px;}}}
+  .left{}
+    .right{.head{span{img{transform: rotate(-90deg)}}}
+    .flight-cards .ticket .bottom .info-icon img{transform: rotate(-90deg) $imp;}}
+    .date-switcher{background-color:white;margin:10px 0;width: 100%;border-radius: 10px;
+      .item{position:relative;text-align:center;width:140px;padding:15px 0; font-family: $font1;font-weight: 600;font-style: normal;font-stretch: normal;line-height: 1.43;letter-spacing: normal;
+        span{display: block;font-size: 16px;color:$dark-slate-blue;opacity: 0.5;}span:nth-of-type(2){font-size: 14px; color:$dark-slate-blue;opacity: .3;}}
+    .slick-center{span{opacity: 1;}span:nth-of-type(2){opacity: .5;}&:after{content: ''; width: 100%; height:2px; position: absolute;left: 0; bottom: 0; background-color: $orange;}}
+      .slick-prev, .slick-next{width: 40px; height:100%; background-color: #e6edf5; color:$dark-slate-blue;z-index: 100;transition: .3s;&:hover{background-color: $orange; transition: .3s;}}
+      .slick-next{right:0;border-top-right-radius: 10px; border-bottom-right-radius: 10px;}
+      .slick-prev{left:0;border-top-left-radius: 10px; border-bottom-left-radius: 10px;}
+      .slick-prev:before, .slick-next:before{color:$dark-slate-blue; opacity: 1;}
+
+    }
+    .flight-cards{width: 100%;float:left;
+      .user-select{box-shadow: 0 16px 32px 0 rgba(31, 56, 110, 0.18); .a-btn{background-color: $dark-slate-blue $imp;}}
+    .ticket{
+      width: 100%; position: relative;border-radius: 10px;margin:10px 0;background-color: white;font-family: $font1;overflow: hidden;
+      .top, .bottom{padding: 30px;.firm-logo{img{max-width: 94px;}}
+        .price{font-size: 24px;font-weight: 600;font-style: normal;font-stretch: normal;line-height: 1.5;letter-spacing: normal;color:$dark-slate-blue;margin-right:25px;}
+        .a-btn{background-color: $orange;width: 120px; height: 36px; color:white;padding: 8px 27px;transition:.3s; &:hover{background-color: $dark-slate-blue; transition: .3s;}}}
+      .top{padding:45px 30px;.right{float:right;}}
+      i{ border-bottom: 2px dotted $dark-slate-blue; opacity: .25; width: 95%; display: block; margin:auto;}
+      .bottom{display:inline-block;.info{display: inline-block;padding-right:35px;color:$dark-slate-blue; font-family: $font1;position: relative;
+      .title{opacity: 0.5;font-size: 14px;font-weight: 600;font-style: normal;font-stretch: normal;line-height: 1.43;letter-spacing: normal;}
+      .descp{  font-size: 24px;font-weight: 600;font-style: normal;font-stretch: normal;line-height: 1.5;letter-spacing: normal;}}
+        .info:nth-of-type(4), .info:nth-of-type(5){.descp{font-size: 16px;padding-top: 8px;}}
+        .info:last-of-type{img{position: relative; top:-15px; padding-right: 0}}
+        .info:first-of-type{padding-right: 0;}
+        .info-icon{display:inline-block;position:relative;padding:0 20px;img{transform: rotate(90deg); margin-top: -5px;padding: 0 20px;}
+          &:before{content: '';width: 12px;height: 10px;position: absolute;left: 20px;top: 10px;background-image: url(../media/icons/dots.png);background-repeat: no-repeat;pointer-events: none;}
+          &:after{content: '';width: 12px;height: 10px;position: absolute;right: 20px;top: 10px;background-image: url(../media/icons/dots.png);background-repeat: no-repeat;pointer-events: none;}}}
+      &:after, &:before{content: ''; width: 12px; height:12px; border-radius: 50%; background-color: $gray; position: absolute;top:50%; margin-top:-6px;}
+      &:after{right:-6px;}&:before{left:-6px;}
+    }}
+  }
+
+footer{padding: 50px 0; background: white; font-family: $font1;color:$dark-slate-blue;
+  .copyright{padding-top: 20px;opacity: 0.5;font-family: $font1;font-size: 14px;font-weight: normal;font-style: normal;font-stretch: normal;line-height: 1.43;letter-spacing: normal;}
+.title{font-size: 16px;font-weight: 600;font-style: normal;font-stretch: normal;line-height: 1.5;letter-spacing: normal;}
+  ul{padding: 0; margin-top:30px;li{margin-bottom: 12px;list-style: none;
+    a{text-decoration: none;color:$dark-slate-blue;  opacity: 0.5;font-size: 14px;font-weight: normal;font-style: normal;font-stretch: normal;line-height: 1.43;letter-spacing: normal;transition: .3s;
+      &:hover{color:$orange; transition: .3s;opacity: 1;}}}}
+}

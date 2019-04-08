@@ -1,0 +1,49 @@
+//Fonts
+$font1:'Averta Std';
+$font2:'Averta Std Bold';
+
+
+@font-face {
+  font-family: 'Averta Std Bold';
+  src: url('../fonts/AvertaStd-Semibold.eot');
+  src: url('../fonts/AvertaStd-Semibold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/AvertaStd-Semibold.woff2') format('woff2'),
+  url('../fonts/AvertaStd-Semibold.woff') format('woff'),
+  url('../fonts/AvertaStd-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Averta Std';
+  src: url('../fonts/AvertaStd-Regular.eot');
+  src: url('../fonts/AvertaStd-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/AvertaStd-Regular.woff2') format('woff2'),
+  url('../fonts/AvertaStd-Regular.woff') format('woff'),
+  url('../fonts/AvertaStd-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+//Medias and Screen
+$min: "only screen and (max-width : 480px)";
+$mob: "only screen and (max-width : 767px)";
+$tablet: "only screen and (min-width : 768px) and (max-width : 1023px)";
+$all: "only screen and (max-width : 1200px)";
+$large: "only screen and (min-width : 1024px) and (max-width : 1200px)";
+
+
+$imp: !important;
+$z-head: 1000;
+//Colors
+
+$dark-slate-blue : #1a3163;
+$dark-blue: #264380;
+$orange: #fab555;
+$gray: #f7f8fc;
+$gray2: #d8e1eb;
+$gray3: #97a6b8;
+
+
+
+
+
